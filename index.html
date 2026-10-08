@@ -1,723 +1,360 @@
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>Payal Makani | Personal Portfolio</title>  <!-- Bootstrap 5.3.3 -->  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">  <style>  
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}  
-  
-body{  
-font-family:Arial,Helvetica,sans-serif;  
-background:#08030f;  
-color:white;  
-overflow-x:hidden;  
-transition:.5s  
-}  
-  
-a{text-decoration:none;color:inherit}  
-  
-body::before{  
-content:"";  
-position:fixed;  
-width:500px;  
-height:500px;  
-background:#9b00ff;  
-border-radius:50%;  
-filter:blur(150px);  
-opacity:.25;  
-top:-150px;  
-left:-150px;  
-z-index:-2;  
-animation:moveGlow 8s infinite alternate  
-}  
-  
-body::after{  
-content:"";  
-position:fixed;  
-width:500px;  
-height:500px;  
-background:#ff008c;  
-border-radius:50%;  
-filter:blur(150px);  
-opacity:.20;  
-right:-150px;  
-bottom:-150px;  
-z-index:-2;  
-animation:moveGlow2 10s infinite alternate  
-}  
-  
-@keyframes moveGlow{  
-from{transform:translate(0,0)}  
-to{transform:translate(180px,100px)}  
-}  
-  
-@keyframes moveGlow2{  
-from{transform:translate(0,0)}  
-to{transform:translate(-150px,-100px)}  
-}  
-  
-/* NAVIGATION */  
-nav{  
-position:fixed;  
-top:0;  
-left:0;  
-width:100%;  
-padding:18px 8%;  
-display:flex;  
-justify-content:space-between;  
-align-items:center;  
-background:rgba(10,5,18,.75);  
-backdrop-filter:blur(15px);  
-border-bottom:1px solid rgba(255,255,255,.1);  
-z-index:1000  
-}  
-  
-.logo{  
-font-size:24px;  
-font-weight:bold;  
-background:linear-gradient(90deg,#ff4ecd,#a855f7,#7c3aed);  
--webkit-background-clip:text;  
-background-clip:text;  
-color:transparent  
-}  
-  
-.nav-links{  
-display:flex;  
-gap:28px;  
-list-style:none;  
-margin-bottom:0  
-}  
-  
-.nav-links a{  
-font-size:15px;  
-transition:.3s  
-}  
-  
-.nav-links a:hover{  
-color:#ff4ecd;  
-text-shadow:0 0 15px #ff4ecd  
-}  
-  
-.theme-btn{  
-border:none;  
-background:rgba(255,255,255,.1);  
-color:white;  
-width:42px;  
-height:42px;  
-border-radius:50%;  
-cursor:pointer;  
-font-size:17px;  
-margin-left:15px;  
-transition:.3s  
-}  
-  
-.theme-btn:hover{  
-transform:rotate(180deg) scale(1.1);  
-background:#ff4ecd  
-}  
-  
-/* HERO */  
-.hero{  
-min-height:100vh;  
-display:flex;  
-justify-content:center;  
-align-items:center;  
-text-align:center;  
-padding:120px 20px 70px;  
-position:relative  
-}  
-  
-.hero-content{max-width:900px}  
-  
-.profile-circle{  
-width:200px;  
-height:200px;  
-margin:auto;  
-border-radius:50%;  
-display:flex;  
-align-items:center;  
-justify-content:center;  
-font-size:65px;  
-font-weight:bold;  
-background:linear-gradient(#08030f,#08030f) padding-box,linear-gradient(135deg,#ff4ecd,#a855f7,#7c3aed) border-box;  
-border:6px solid transparent;  
-box-shadow:0 0 30px rgba(255,78,205,.5);  
-animation:float 4s ease-in-out infinite  
-}  
-  
-@keyframes float{  
-0%,100%{transform:translateY(0)}  
-50%{transform:translateY(-15px)}  
-}  
-  
-.hero h1{  
-margin-top:50px;  
-font-size:clamp(42px,8vw,78px);  
-line-height:1.1;  
-font-weight:700  
-}  
-  
-.gradient-text{  
-background:linear-gradient(90deg,#ff4ecd,#c084fc,#a855f7);  
--webkit-background-clip:text;  
-background-clip:text;  
--webkit-text-fill-color:transparent  
-}  
-  
-.hero h2{  
-margin-top:15px;  
-font-size:24px;  
-color:#ddd  
-}  
-  
-.typing{  
-color:#ff4ecd;  
-font-weight:bold  
-}  
-  
-.hero p{  
-max-width:650px;  
-margin:25px auto;  
-color:#bdb5c7;  
-line-height:1.8;  
-font-size:17px  
-}  
-  
-.hero-buttons{  
-margin-top:30px;  
-display:flex;  
-justify-content:center;  
-gap:15px;  
-flex-wrap:wrap  
-}  
-  
-.btn-custom{  
-padding:13px 25px;  
-border-radius:30px;  
-font-weight:bold;  
-transition:.3s;  
-cursor:pointer;  
-border:none  
-}  
-  
-.primary-btn{  
-background:linear-gradient(90deg,#ff4ecd,#8b5cf6);  
-color:white;  
-box-shadow:0 0 20px rgba(255,78,205,.35)  
-}  
-  
-.primary-btn:hover{  
-transform:translateY(-5px) scale(1.04);  
-box-shadow:0 0 35px rgba(255,78,205,.6);  
-color:white  
-}  
-  
-.outline-btn{  
-border:1px solid #a855f7;  
-background:transparent;  
-color:white  
-}  
-  
-.outline-btn:hover{  
-background:#a855f7;  
-color:white;  
-transform:translateY(-5px)  
-}  
-  
-/* SECTIONS */  
-section{padding:100px 8%}  
-  
-.section-title{  
-text-align:center;  
-font-size:40px;  
-margin-bottom:50px  
-}  
-  
-.section-title span{color:#ff4ecd}  
-  
-/* GLASS CARDS */  
-.glass{  
-background:rgba(255,255,255,.06);  
-border:1px solid rgba(255,255,255,.1);  
-backdrop-filter:blur(15px);  
-border-radius:20px;  
-box-shadow:0 10px 40px rgba(0,0,0,.3);  
-transition:.4s  
-}  
-  
-.glass:hover{  
-transform:translateY(-8px);  
-border-color:rgba(255,78,205,.4);  
-box-shadow:0 15px 45px rgba(255,78,205,.15)  
-}  
-  
-/* ABOUT */  
-.about-card{  
-max-width:900px;  
-margin:auto;  
-padding:35px  
-}  
-  
-.about-card p{  
-color:#c7c0ce;  
-line-height:1.9;  
-font-size:17px;  
-text-align:center  
-}  
-  
-/* SKILLS */  
-.skills-container{  
-max-width:850px;  
-margin:auto;  
-padding:35px  
-}  
-  
-.skill{margin-bottom:25px}  
-  
-.skill-header{  
-display:flex;  
-justify-content:space-between;  
-margin-bottom:8px  
-}  
-  
-.skill-header span:last-child{color:#ff4ecd}  
-  
-.skill-bar{  
-height:10px;  
-background:rgba(255,255,255,.1);  
-border-radius:20px;  
-overflow:hidden  
-}  
-  
-.skill-progress{  
-height:100%;  
-border-radius:20px;  
-background:linear-gradient(90deg,#ff4ecd,#8b5cf6);  
-animation:skillAnimation 2s ease  
-}  
-  
-@keyframes skillAnimation{  
-from{width:0}  
-}  
-  
-/* PROJECTS */  
-.project-card{  
-padding:30px;  
-text-align:center;  
-height:100%  
-}  
-  
-.project-icon{  
-font-size:45px;  
-margin-bottom:20px  
-}  
-  
-.project-card h3{  
-margin-bottom:15px;  
-color:#fff  
-}  
-  
-.project-card p{  
-color:#bbb;  
-line-height:1.7;  
-margin-bottom:20px  
-}  
-  
-.project-btn{  
-display:inline-block;  
-padding:9px 18px;  
-border-radius:20px;  
-background:rgba(255,78,205,.12);  
-color:#ff4ecd;  
-border:1px solid rgba(255,78,205,.3);  
-transition:.3s  
-}  
-  
-.project-btn:hover{  
-background:#ff4ecd;  
-color:white  
-}  
-  
-/* CONTACT */  
-.contact-container{  
-max-width:1000px;  
-margin:auto  
-}  
-  
-.contact-info{  
-padding:35px;  
-height:100%  
-}  
-  
-.contact-info h3{  
-font-size:28px;  
-margin-bottom:20px  
-}  
-  
-.contact-item{  
-margin:20px 0;  
-padding:15px;  
-background:rgba(255,255,255,.05);  
-border-radius:12px;  
-transition:.3s  
-}  
-  
-.contact-item:hover{  
-transform:translateX(8px);  
-background:rgba(255,78,205,.1)  
-}  
-  
-.contact-item strong{color:#ff4ecd}  
-  
-.contact-item a:hover{color:#ff4ecd}  
-  
-form{  
-padding:35px;  
-height:100%  
-}  
-  
-input,textarea{  
-width:100%;  
-padding:14px;  
-margin-bottom:15px;  
-background:rgba(255,255,255,.07);  
-border:1px solid rgba(255,255,255,.12);  
-border-radius:10px;  
-color:white;  
-outline:none;  
-font-size:15px  
-}  
-  
-input:focus,textarea:focus{  
-border-color:#ff4ecd;  
-box-shadow:0 0 15px rgba(255,78,205,.2)  
-}  
-  
-input::placeholder,textarea::placeholder{color:#aaa}  
-  
-textarea{  
-height:130px;  
-resize:none  
-}  
-  
-/* FOOTER */  
-footer{  
-text-align:center;  
-padding:30px;  
-border-top:1px solid rgba(255,255,255,.1);  
-color:#aaa  
-}  
-  
-footer span{color:#ff4ecd}  
-  
-/* BACK TO TOP */  
-#topBtn{  
-position:fixed;  
-bottom:25px;  
-right:25px;  
-width:45px;  
-height:45px;  
-border:none;  
-border-radius:50%;  
-background:linear-gradient(135deg,#ff4ecd,#8b5cf6);  
-color:white;  
-font-size:20px;  
-cursor:pointer;  
-display:none;  
-z-index:1000;  
-box-shadow:0 0 20px rgba(255,78,205,.4)  
-}  
-  
-#topBtn:hover{transform:scale(1.1)}  
-  
-/* LIGHT MODE */  
-body.light{  
-background:#fff5fc;  
-color:#24152d  
-}  
-  
-body.light nav{background:rgba(255,255,255,.85)}  
-  
-body.light .nav-links a{color:#24152d}  
-  
-body.light .hero p,  
-body.light .about-card p,  
-body.light .project-card p{color:#66576b}  
-  
-body.light .glass{  
-background:rgba(255,255,255,.65);  
-border-color:rgba(168,85,247,.2)  
-}  
-  
-body.light input,  
-body.light textarea{  
-background:rgba(255,255,255,.8);  
-color:#24152d  
-}  
-  
-body.light .outline-btn{color:#24152d}  
-  
-/* MOBILE */  
-@media(max-width:768px){  
-nav{padding:15px 5%}  
-.logo{font-size:20px}  
-.nav-links{gap:12px}  
-.nav-links a{font-size:12px}  
-.theme-btn{  
-margin-left:5px;  
-width:36px;  
-height:36px  
-}  
-.hero{padding-top:130px}  
-.profile-circle{  
-width:140px;  
-height:140px;  
-font-size:45px  
-}  
-.hero h2{font-size:19px}  
-.hero p{font-size:15px}  
-section{padding:75px 5%}  
-.section-title{font-size:32px}  
-}  
-  
-@media(max-width:480px){  
-.nav-links{gap:7px}  
-.nav-links a{font-size:10px}  
-.logo{font-size:17px}  
-.hero h1{font-size:42px}  
-.hero-buttons{  
-flex-direction:column;  
-align-items:center  
-}  
-.btn-custom{width:210px}  
-.profile-circle{  
-width:120px;  
-height:120px;  
-font-size:40px  
-}  
-}  
-</style>  </head>  <body>  <!-- NAVIGATION -->  <nav>  
-<div class="logo">Payal</div>  <ul class="nav-links">  
-<li><a href="#home">Home</a></li>  
-<li><a href="#about">About</a></li>  
-<li><a href="#skills">Skills</a></li>  
-<li><a href="#projects">Projects</a></li>  
-<li><a href="#contact">Contact</a></li>  
-</ul>  <button class="theme-btn" onclick="toggleTheme()" id="themeButton">☀</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payal Makani | Personal Portfolio</title>
 
-</nav>  <!-- HOME -->  <section class="hero" id="home">  
-<div class="hero-content">  <div class="profile-circle">PM</div>  <h1>  
-Hi, I'm  
-<span class="gradient-text">Payal Makani</span>  
-</h1>  <h2>  
-I'm a  
-<span class="typing" id="typingText">BTech CSE DS Student</span>  
-</h2>  <p>  
-Welcome to my personal portfolio.  
-I am passionate about technology,  
-programming, data science and web development.  
-I enjoy learning new technologies and  
-creating interesting digital projects.  
-</p>  <div class="hero-buttons">  
-<a href="#projects" class="btn-custom primary-btn">Explore My Work</a>  
-<a href="#contact" class="btn-custom outline-btn">Contact Me</a>  
-</div>  </div>  
-</section>  <!-- ABOUT -->  <section id="about">  <h2 class="section-title">  
-About <span>Me</span>  
-</h2>  <div class="glass about-card">  
-<p>  
-Hello! My name is <strong>Payal Makani</strong>.  
-I am a BTech Computer Science and Data Science student.  
-I am interested in programming, web development,  
-data analytics and emerging technologies.  
-<br><br>  
-I am continuously improving my technical skills through  
-practical projects, experiments and hands-on learning.  
-My goal is to build useful, creative and user-friendly  
-technology solutions.  
-</p>  
-</div>  </section>  <!-- SKILLS -->  <section id="skills">  <h2 class="section-title">  
-My <span>Skills</span>  
-</h2>  <div class="glass skills-container">  <div class="skill">  
-<div class="skill-header">  
-<span>HTML</span>  
-<span>90%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:90%"></div>  
-</div>  
-</div>  <div class="skill">  
-<div class="skill-header">  
-<span>CSS</span>  
-<span>85%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:85%"></div>  
-</div>  
-</div>  <div class="skill">  
-<div class="skill-header">  
-<span>C++</span>  
-<span>80%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:80%"></div>  
-</div>  
-</div>  <div class="skill">  
-<div class="skill-header">  
-<span>Python</span>  
-<span>75%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:75%"></div>  
-</div>  
-</div>  <div class="skill">  
-<div class="skill-header">  
-<span>Bootstrap</span>  
-<span>80%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:80%"></div>  
-</div>  
-</div>  <div class="skill">  
-<div class="skill-header">  
-<span>Data Structures</span>  
-<span>85%</span>  
-</div>  
-<div class="skill-bar">  
-<div class="skill-progress" style="width:85%"></div>  
-</div>  
-</div>  </div>  
-</section>  <!-- PROJECTS -->  <section id="projects">  <h2 class="section-title">  
-My <span>Projects</span>  
-</h2>  <div class="container">  
-<div class="row g-4">  <div class="col-12 col-md-6 col-lg-4">  
-<div class="glass project-card">  <div class="project-icon">💻</div>  <h3>Personal Portfolio</h3>  <p>  
-A responsive personal portfolio website created  
-using HTML, CSS, Bootstrap and JavaScript.  
-</p>  <a href="#home" class="project-btn">View Project</a>
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</div>  
-</div>  <div class="col-12 col-md-6 col-lg-4">  
-<div class="glass project-card">  <div class="project-icon">📊</div>  <h3>Data Analysis</h3>  <p>  
-A beginner-friendly data analysis project using  
-Python, Pandas and data visualization techniques.  
-</p>  <a href="#skills" class="project-btn">View Skills</a>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-</div>  
-</div>  <div class="col-12 col-md-6 col-lg-4">  
-<div class="glass project-card">  <div class="project-icon">⚙️</div>  <h3>C++ Projects</h3>  <p>  
-Programming projects based on C++,  
-object-oriented programming and data structures.  
-</p>  <a href="#skills" class="project-btn">View Skills</a>
+<body>
 
-</div>  
-</div>  </div>  
-</div>  </section>  <!-- CONTACT -->  <section id="contact">  <h2 class="section-title">  
-Contact <span>Me</span>  
-</h2>  <div class="container contact-container">  
-<div class="row g-4">  <div class="col-12 col-lg-5">  
-<div class="glass contact-info">  <h3>Get In Touch</h3>  <p>  
-Feel free to contact me for projects,  
-collaboration or any queries.  
-</p>  <div class="contact-item">  
-<strong>Email</strong><br>  
-<a href="mailto:j25ds162@jssuninoida.edu.in">  
-j25ds162@jssuninoida.edu.in  
-</a>  
-</div>  <div class="contact-item">  
-<strong>Phone</strong><br>  
-<a href="tel:8279351742">8279351742</a>  
-</div>  <div class="contact-item">  
-<strong>Location</strong><br>  
-India  
-</div>  </div>  
-</div>  <div class="col-12 col-lg-7">  
-<div class="glass">  <form onsubmit="sendMessage(event)">  <input type="text" placeholder="Your Name" required>  <input type="email" placeholder="Your Email" required>  <input type="text" placeholder="Subject" required>  <textarea placeholder="Your Message" required></textarea>  <button type="submit" class="btn-custom primary-btn">  
-Send Message  
-</button>  </form>  </div>  
-</div>  </div>  
-</div>  </section>  <!-- FOOTER -->  <footer>  
-<p>  
-© 2026 <span>Payal Makani</span>. All Rights Reserved.  
-</p>  
-</footer>  <!-- BACK TO TOP -->  <button id="topBtn" onclick="goTop()">↑</button>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Payal</div>
 
-<!-- Bootstrap JavaScript -->  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  <script>  
-function toggleTheme(){  
-document.body.classList.toggle("light");  
-const button=document.getElementById("themeButton");  
-  
-if(document.body.classList.contains("light")){  
-button.innerHTML="🌙";  
-}else{  
-button.innerHTML="☀";  
-}  
-}  
-  
-function sendMessage(event){  
-event.preventDefault();  
-alert("Thank you for contacting me! Your message has been received.");  
-event.target.reset();  
-}  
-  
-window.addEventListener("scroll",function(){  
-const button=document.getElementById("topBtn");  
-  
-if(window.scrollY>300){  
-button.style.display="block";  
-}else{  
-button.style.display="none";  
-}  
-});  
-  
-function goTop(){  
-window.scrollTo({  
-top:0,  
-behavior:"smooth"  
-});  
-}  
-  
-const typingText=document.getElementById("typingText");  
-  
-const words=[  
-"BTech CSE DS Student",  
-"Web Developer",  
-"Data Science Student",  
-"Programmer"  
-];  
-  
-let wordIndex=0;  
-let charIndex=0;  
-let deleting=false;  
-  
-function typeEffect(){  
-  
-const currentWord=words[wordIndex];  
-  
-if(!deleting){  
-  
-typingText.textContent=currentWord.substring(0,charIndex+1);  
-charIndex++;  
-  
-if(charIndex===currentWord.length){  
-deleting=true;  
-setTimeout(typeEffect,1500);  
-return;  
-}  
-  
-}else{  
-  
-typingText.textContent=currentWord.substring(0,charIndex-1);  
-charIndex--;  
-  
-if(charIndex===0){  
-deleting=false;  
-wordIndex=(wordIndex+1)%words.length;  
-}  
-}  
-  
-setTimeout(typeEffect,deleting?50:100);  
-}  
-  
-typeEffect();  
-</script>  </body>  
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="theme-btn" onclick="toggleTheme()" id="themeButton">
+            ☀
+        </button>
+    </nav>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="profile-circle">PM</div>
+
+            <h1>
+                Hi, I'm
+                <span class="gradient-text">Payal Makani</span>
+            </h1>
+
+            <h2>
+                I'm a
+                <span class="typing" id="typingText">BTech CSE DS Student</span>
+            </h2>
+
+            <p>
+                Welcome to my personal portfolio.
+                I am passionate about technology,
+                programming, data science and web development.
+                I enjoy learning new technologies and
+                creating interesting digital projects.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-custom primary-btn">
+                    Explore My Work
+                </a>
+
+                <a href="#contact" class="btn-custom outline-btn">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="glass about-card">
+            <p>
+                Hello! My name is <strong>Payal Makani</strong>.
+                I am a BTech Computer Science and Data Science student.
+                I am interested in programming, web development,
+                data analytics and emerging technologies.
+                <br><br>
+                I am continuously improving my technical skills through
+                practical projects, experiments and hands-on learning.
+                My goal is to build useful, creative and user-friendly
+                technology solutions.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="glass skills-container">
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>C++</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Python</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Bootstrap</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Data Structures</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="glass project-card">
+
+                        <div class="project-icon">💻</div>
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p>
+                            A responsive personal portfolio website created
+                            using HTML, CSS, Bootstrap and JavaScript.
+                        </p>
+
+                        <a href="#home" class="project-btn">
+                            View Project
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="glass project-card">
+
+                        <div class="project-icon">📊</div>
+
+                        <h3>Data Analysis</h3>
+
+                        <p>
+                            A beginner-friendly data analysis project using
+                            Python, Pandas and data visualization techniques.
+                        </p>
+
+                        <a href="#skills" class="project-btn">
+                            View Skills
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="glass project-card">
+
+                        <div class="project-icon">⚙️</div>
+
+                        <h3>C++ Projects</h3>
+
+                        <p>
+                            Programming projects based on C++,
+                            object-oriented programming and data structures.
+                        </p>
+
+                        <a href="#skills" class="project-btn">
+                            View Skills
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
+
+        <div class="container contact-container">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-lg-5">
+
+                    <div class="glass contact-info">
+
+                        <h3>Get In Touch</h3>
+
+                        <p>
+                            Feel free to contact me for projects,
+                            collaboration or any queries.
+                        </p>
+
+                        <div class="contact-item">
+                            <strong>Email</strong><br>
+
+                            <a href="mailto:j25ds162@jssuninoida.edu.in">
+                                j25ds162@jssuninoida.edu.in
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Phone</strong><br>
+
+                            <a href="tel:8279351742">
+                                8279351742
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <strong>Location</strong><br>
+                            India
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-7">
+
+                    <div class="glass">
+
+                        <form onsubmit="sendMessage(event)">
+
+                            <input
+                                type="text"
+                                placeholder="Your Name"
+                                required
+                            >
+
+                            <input
+                                type="email"
+                                placeholder="Your Email"
+                                required
+                            >
+
+                            <input
+                                type="text"
+                                placeholder="Subject"
+                                required
+                            >
+
+                            <textarea
+                                placeholder="Your Message"
+                                required
+                            ></textarea>
+
+                            <button
+                                type="submit"
+                                class="btn-custom primary-btn"
+                            >
+                                Send Message
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Payal Makani</span>. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button id="topBtn" onclick="goTop()">
+        ↑
+    </button>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
   </html>
