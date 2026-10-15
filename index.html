@@ -1,360 +1,230 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payal Makani | Personal Portfolio</title>
 
-    <!-- Bootstrap 5.3.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Payal Makani | Portfolio</title>
 
-    <!-- Custom CSS -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="logo">Payal</div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                Payal Makani ✨
+            </a>
 
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <button class="theme-btn" onclick="toggleTheme()" id="themeButton">
-            ☀
-        </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="theme-btn" id="themeButton"
+                                onclick="changeTheme()">🌙 Dark</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- HOME -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-
-            <div class="profile-circle">PM</div>
-
-            <h1>
-                Hi, I'm
-                <span class="gradient-text">Payal Makani</span>
-            </h1>
-
-            <h2>
-                I'm a
-                <span class="typing" id="typingText">BTech CSE DS Student</span>
-            </h2>
-
-            <p>
-                Welcome to my personal portfolio.
-                I am passionate about technology,
-                programming, data science and web development.
-                I enjoy learning new technologies and
-                creating interesting digital projects.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#projects" class="btn-custom primary-btn">
-                    Explore My Work
-                </a>
-
-                <a href="#contact" class="btn-custom outline-btn">
-                    Contact Me
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
-
-        <div class="glass about-card">
-            <p>
-                Hello! My name is <strong>Payal Makani</strong>.
-                I am a BTech Computer Science and Data Science student.
-                I am interested in programming, web development,
-                data analytics and emerging technologies.
-                <br><br>
-                I am continuously improving my technical skills through
-                practical projects, experiments and hands-on learning.
-                My goal is to build useful, creative and user-friendly
-                technology solutions.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2 class="section-title">
-            My <span>Skills</span>
-        </h2>
-
-        <div class="glass skills-container">
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>HTML</span>
-                    <span>90%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:90%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>CSS</span>
-                    <span>85%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:85%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>C++</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:80%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>Python</span>
-                    <span>75%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:75%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>Bootstrap</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:80%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-header">
-                    <span>Data Structures</span>
-                    <span>85%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width:85%"></div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-
-        <h2 class="section-title">
-            My <span>Projects</span>
-        </h2>
-
+    <!-- Home -->
+    <section id="home" class="hero-section">
         <div class="container">
-            <div class="row g-4">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
 
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="glass project-card">
+                    <h1>Hi, I'm <span>Payal Makani</span></h1>
 
-                        <div class="project-icon">💻</div>
+                    <h3>Aspiring Developer | CSE Data Science Student</h3>
 
-                        <h3>Personal Portfolio</h3>
+                    <p class="hero-text">
+                        I enjoy learning technology, creating websites
+                        and turning simple ideas into creative projects.
+                    </p>
 
-                        <p>
-                            A responsive personal portfolio website created
-                            using HTML, CSS, Bootstrap and JavaScript.
-                        </p>
-
-                        <a href="#home" class="project-btn">
-                            View Project
-                        </a>
-
-                    </div>
+                    <a href="#projects" class="btn gradient-btn">Explore My Work ↗</a>
+                    <a href="#contact" class="btn outline-btn">Contact Me</a>
                 </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="glass project-card">
-
-                        <div class="project-icon">📊</div>
-
-                        <h3>Data Analysis</h3>
-
-                        <p>
-                            A beginner-friendly data analysis project using
-                            Python, Pandas and data visualization techniques.
-                        </p>
-
-                        <a href="#skills" class="project-btn">
-                            View Skills
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="glass project-card">
-
-                        <div class="project-icon">⚙️</div>
-
-                        <h3>C++ Projects</h3>
-
-                        <p>
-                            Programming projects based on C++,
-                            object-oriented programming and data structures.
-                        </p>
-
-                        <a href="#skills" class="project-btn">
-                            View Skills
-                        </a>
-
-                    </div>
-                </div>
-
             </div>
         </div>
-
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
+    <!-- About -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <p class="small-heading">A LITTLE ABOUT ME</p>
+            <h2 class="section-title">About Me</h2>
 
-        <h2 class="section-title">
-            Contact <span>Me</span>
-        </h2>
-
-        <div class="container contact-container">
-
-            <div class="row g-4">
-
-                <div class="col-12 col-lg-5">
-
-                    <div class="glass contact-info">
-
-                        <h3>Get In Touch</h3>
-
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="about-card">
                         <p>
-                            Feel free to contact me for projects,
-                            collaboration or any queries.
+                            Hello! I'm Payal, a Computer Science and Data
+                            Science student who is exploring web development
+                            and programming.
                         </p>
-
-                        <div class="contact-item">
-                            <strong>Email</strong><br>
-
-                            <a href="mailto:j25ds162@jssuninoida.edu.in">
-                                j25ds162@jssuninoida.edu.in
-                            </a>
-                        </div>
-
-                        <div class="contact-item">
-                            <strong>Phone</strong><br>
-
-                            <a href="tel:8279351742">
-                                8279351742
-                            </a>
-                        </div>
-
-                        <div class="contact-item">
-                            <strong>Location</strong><br>
-                            India
-                        </div>
-
+                        <p>
+                            I am building my skills step by step through
+                            practice, creativity and hands-on projects.
+                            My goal is to create useful, attractive and
+                            user-friendly digital experiences.
+                        </p>
                     </div>
-
                 </div>
-
-                <div class="col-12 col-lg-7">
-
-                    <div class="glass">
-
-                        <form onsubmit="sendMessage(event)">
-
-                            <input
-                                type="text"
-                                placeholder="Your Name"
-                                required
-                            >
-
-                            <input
-                                type="email"
-                                placeholder="Your Email"
-                                required
-                            >
-
-                            <input
-                                type="text"
-                                placeholder="Subject"
-                                required
-                            >
-
-                            <textarea
-                                placeholder="Your Message"
-                                required
-                            ></textarea>
-
-                            <button
-                                type="submit"
-                                class="btn-custom primary-btn"
-                            >
-                                Send Message
-                            </button>
-
-                        </form>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </div>
-
     </section>
 
-    <!-- FOOTER -->
+    <!-- Skills -->
+    <section id="skills" class="section-padding skills-section">
+        <div class="container">
+            <p class="small-heading">WHAT I'M LEARNING</p>
+            <h2 class="section-title">My Skills</h2>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h4>HTML</h4>
+                        <p>Creating the structure of web pages.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h4>CSS</h4>
+                        <p>Designing layouts, colors and gradients.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">⚡</div>
+                        <h4>JavaScript</h4>
+                        <p>Adding simple interactive features.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h4>Bootstrap</h4>
+                        <p>Building responsive website layouts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <p class="small-heading">THINGS I'M BUILDING</p>
+            <h2 class="section-title">My Projects</h2>
+
+            <div class="row g-4 mt-2">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-banner banner-one">🌦️</div>
+                        <div class="p-4">
+                            <h4>Weather App</h4>
+                            <p>
+                                A weather website concept for displaying
+                                weather information in a clear interface.
+                            </p>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-banner banner-two">📊</div>
+                        <div class="p-4">
+                            <h4>Data Science Learning</h4>
+                            <p>
+                                Exploring data, programming and
+                                visualization through practice.
+                            </p>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Data</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card">
+                        <div class="project-banner banner-three">🎨</div>
+                        <div class="p-4">
+                            <h4>Personal Portfolio</h4>
+                            <p>
+                                A responsive website to present my
+                                skills, learning journey and projects.
+                            </p>
+                            <span class="project-tag">Bootstrap</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <p class="small-heading">LET'S CONNECT</p>
+            <h2 class="section-title">Contact Me</h2>
+            <p>
+                Thank you for visiting my portfolio!
+                You can find my work and code on GitHub.
+            </p>
+
+            <!-- Replace the link with your GitHub profile URL -->
+            <a href="https://github.com/" target="_blank"
+               rel="noopener noreferrer" class="btn gradient-btn">
+                Visit GitHub ↗
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-
-        <p>
-            © 2026 <span>Payal Makani</span>. All Rights Reserved.
-        </p>
-
+        <p>Made with 💜 by Payal Makani</p>
+        <p class="mb-0">Personal Portfolio | 2026</p>
     </footer>
 
-    <!-- BACK TO TOP -->
-    <button id="topBtn" onclick="goTop()">
-        ↑
-    </button>
-
     <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JavaScript -->
+    <!-- My JavaScript -->
     <script src="script.js"></script>
 
 </body>
-  </html>
+</html>
