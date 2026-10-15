@@ -1,53 +1,140 @@
 
-/* BASIC DESIGN */
+/* =====================================
+   PAYAL MAKANI - PERSONAL PORTFOLIO
+   BEAUTIFUL GRADIENT DESIGN
+===================================== */
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     color: #292544;
-    background: linear-gradient(135deg, #f5f3ff, #fdf2f8, #ecfeff);
-    transition: background 0.3s, color 0.3s;
+    line-height: 1.7;
+
+    /* Wonderful gradient background */
+    background:
+        radial-gradient(ellipse at top left, #e0e7ff 0%, transparent 45%),
+        radial-gradient(ellipse at top right, #fce7f3 0%, transparent 45%),
+        linear-gradient(135deg, #f5f3ff, #eff6ff, #ecfeff);
+
+    background-attachment: fixed;
+    transition: background 0.4s, color 0.4s;
 }
 
-/* NAVIGATION */
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
 .custom-nav {
-    background: linear-gradient(90deg, #4338ca, #7e22ce, #db2777);
+    background: linear-gradient(
+        90deg,
+        #312e81,
+        #6d28d9,
+        #9333ea,
+        #db2777
+    );
+
     border-bottom: 4px solid transparent;
-    border-image: linear-gradient(90deg, #22d3ee, #c084fc, #f9a8d4) 1;
+    border-image: linear-gradient(
+        90deg,
+        #22d3ee,
+        #c084fc,
+        #f9a8d4,
+        #fde047
+    ) 1;
 }
 
 .navbar-brand {
-    letter-spacing: 0.5px;
+    color: white !important;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .nav-link {
     color: white !important;
     margin: 0 5px;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #fde68a !important;
+    color: #fde047 !important;
 }
 
 .theme-btn {
+    padding: 8px 15px;
+    border: 1px solid #ffffff90;
+    border-radius: 25px;
     color: white;
     background: #ffffff20;
-    border: 1px solid #ffffff80;
-    border-radius: 25px;
-    padding: 8px 14px;
     cursor: pointer;
 }
 
-/* HERO */
+.theme-btn:hover {
+    background: #ffffff35;
+}
+
+/* =====================================
+   HERO / HOME SECTION
+===================================== */
+
 .hero-section {
-    padding: 100px 15px;
+    position: relative;
+    overflow: hidden;
+    padding: 110px 15px;
     text-align: center;
     color: white;
-    background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #818cf8 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            #f472b6 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #312e81,
+            #6d28d9,
+            #9333ea,
+            #db2777
+        );
+}
+
+/* Decorative gradient circles */
+.hero-section::before,
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #67e8f9, #c084fc);
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+.hero-section::before {
+    top: 20px;
+    left: -70px;
+}
+
+.hero-section::after {
+    bottom: 10px;
+    right: -60px;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .small-heading {
@@ -55,6 +142,7 @@ body {
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .hero-section .small-heading {
@@ -62,9 +150,10 @@ body {
 }
 
 .hero-section h1 {
-    font-size: clamp(36px, 6vw, 58px);
+    font-size: clamp(36px, 6vw, 60px);
     font-weight: bold;
-    margin: 15px 0;
+    line-height: 1.2;
+    margin: 20px 0;
 }
 
 .hero-section h1 span {
@@ -72,126 +161,216 @@ body {
 }
 
 .hero-section h3 {
-    font-size: clamp(18px, 3vw, 24px);
+    font-size: clamp(18px, 3vw, 25px);
 }
 
 .hero-text {
     max-width: 650px;
-    margin: 20px auto;
+    margin: 22px auto;
     font-size: 17px;
 }
 
-/* BUTTONS */
+/* =====================================
+   BUTTONS
+===================================== */
+
 .gradient-btn {
-    color: white;
-    background: linear-gradient(90deg, #06b6d4, #6366f1);
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 8px;
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
     border: none;
     border-radius: 30px;
-    padding: 12px 23px;
-    margin: 8px;
-    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #06b6d4,
+        #6366f1,
+        #a855f7
+    );
+
+    box-shadow: 0 5px 18px #4338ca35;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gradient-btn:hover {
-    color: white;
-    transform: translateY(-2px);
-    background: linear-gradient(90deg, #0891b2, #4f46e5);
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px #4338ca50;
 }
 
 .outline-btn {
+    display: inline-block;
+    padding: 10px 23px;
+    margin: 8px;
     color: white;
     border: 2px solid white;
     border-radius: 30px;
-    padding: 10px 22px;
-    margin: 8px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
 }
 
 .outline-btn:hover {
-    color: #4f46e5;
+    color: #6d28d9;
     background: white;
 }
 
-/* SECTIONS */
+/* =====================================
+   ALL SECTIONS
+===================================== */
+
 .section-padding {
-    padding: 70px 15px;
+    padding: 75px 15px;
     text-align: center;
 }
 
 .section-title {
-    font-size: 34px;
+    color: #312e81;
+    font-size: 36px;
     font-weight: bold;
-    margin: 10px 0 25px;
+    margin: 12px 0 25px;
 }
 
-/* ABOUT */
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+#about {
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            #ddd6fe,
+            transparent 50%
+        ),
+        linear-gradient(135deg, #ffffff, #eff6ff);
+}
+
 .about-card {
-    padding: 30px;
+    padding: 32px;
     text-align: left;
     line-height: 1.9;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #ffffff, #ede9fe);
-    box-shadow: 0 8px 25px #4338ca15;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f5f3ff,
+        #e0f2fe
+    );
+
+    box-shadow: 0 10px 30px #4338ca15;
 }
 
-/* SKILLS */
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* =====================================
+   SKILLS SECTION
+===================================== */
+
 .skills-section {
-    background: linear-gradient(135deg, #ede9fe, #fce7f3, #cffafe);
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            #fbcfe8,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #ede9fe,
+            #fce7f3,
+            #cffafe
+        );
 }
 
 .skill-card {
     height: 100%;
-    padding: 28px 18px;
-    border-radius: 18px;
-    background: linear-gradient(145deg, #ffffff, #f3e8ff);
-    box-shadow: 0 6px 20px #4338ca15;
-    transition: transform 0.3s;
+    padding: 30px 20px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f5f3ff,
+        #e0f2fe
+    );
+
+    box-shadow: 0 8px 25px #4338ca15;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px #4338ca25;
 }
 
 .skill-icon {
-    font-size: 38px;
+    font-size: 42px;
     margin-bottom: 12px;
 }
 
 .skill-card h4 {
     color: #6d28d9;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* PROJECTS */
+/* =====================================
+   PROJECTS SECTION
+===================================== */
+
+#projects {
+    background:
+        radial-gradient(
+            circle at 100% 100%,
+            #fce7f3,
+            transparent 45%
+        ),
+        linear-gradient(135deg, #ffffff, #eff6ff);
+}
+
 .project-card {
     height: 100%;
     overflow: hidden;
     text-align: left;
-    border-radius: 18px;
-    background: white;
-    box-shadow: 0 6px 20px #4338ca15;
-    transition: transform 0.3s;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f5f3ff
+    );
+
+    box-shadow: 0 8px 25px #4338ca15;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px #4338ca25;
 }
 
 .project-banner {
-    padding: 25px;
+    padding: 28px 15px;
     text-align: center;
-    font-size: 48px;
+    font-size: 50px;
 }
 
 .banner-one {
-    background: linear-gradient(135deg, #67e8f9, #818cf8);
+    background: linear-gradient(135deg, #67e8f9, #818cf8, #c4b5fd);
 }
 
 .banner-two {
-    background: linear-gradient(135deg, #c4b5fd, #f9a8d4);
+    background: linear-gradient(135deg, #c4b5fd, #f9a8d4, #fbcfe8);
 }
 
 .banner-three {
-    background: linear-gradient(135deg, #a7f3d0, #93c5fd);
+    background: linear-gradient(135deg, #a7f3d0, #93c5fd, #c4b5fd);
 }
 
 .project-card h4 {
@@ -201,90 +380,200 @@ body {
 
 .project-tag {
     display: inline-block;
-    margin: 3px;
-    padding: 5px 10px;
+    margin: 4px 3px;
+    padding: 5px 11px;
     border-radius: 20px;
     color: #5b21b6;
-    background: #ede9fe;
+    background: linear-gradient(90deg, #ede9fe, #fce7f3);
     font-size: 12px;
 }
 
-/* CONTACT */
+/* =====================================
+   CONTACT SECTION
+===================================== */
+
 .contact-section {
-    background: linear-gradient(135deg, #dbeafe, #fce7f3);
+    background:
+        radial-gradient(
+            circle at 0% 100%,
+            #c4b5fd,
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #fce7f3,
+            #cffafe
+        );
 }
 
-/* FOOTER */
+/* =====================================
+   FOOTER
+===================================== */
+
 footer {
-    padding: 25px 15px;
+    padding: 28px 15px;
     text-align: center;
     color: white;
-    background: linear-gradient(90deg, #312e81, #7e22ce, #9d174d);
+
+    background: linear-gradient(
+        90deg,
+        #312e81,
+        #6d28d9,
+        #9333ea,
+        #9d174d
+    );
+
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(
+        90deg,
+        #22d3ee,
+        #c084fc,
+        #f9a8d4
+    ) 1;
 }
 
-/* DARK MODE */
+footer p {
+    margin-bottom: 5px;
+}
+
+/* =====================================
+   DARK THEME
+===================================== */
+
 body.dark {
-    color: #f1f5f9;
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    color: #e2e8f0;
+
+    background:
+        radial-gradient(
+            ellipse at top left,
+            #312e81,
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at bottom right,
+            #581c87,
+            transparent 45%
+        ),
+        linear-gradient(135deg, #020617, #0f172a, #1e1b4b);
+
+    background-attachment: fixed;
 }
 
 body.dark #about,
 body.dark #projects {
-    background: transparent;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e1b4b,
+        #312e81
+    );
 }
 
 body.dark .skills-section {
-    background: linear-gradient(135deg, #111827, #312e81, #4c1d4f);
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #312e81,
+        #4c1d4f
+    );
 }
 
 body.dark .contact-section {
-    background: linear-gradient(135deg, #172554, #312e81, #4c1d4f);
-}
-
-body.dark .about-card,
-body.dark .skill-card {
-    color: #f1f5f9;
-    background: linear-gradient(135deg, #1e293b, #312e81);
-}
-
-body.dark .project-card {
-    color: #f1f5f9;
-    background: #1e293b;
-}
-
-body.dark .project-card h4 {
-    color: #c4b5fd;
-}
-
-body.dark .project-tag {
-    color: #e9d5ff;
-    background: #4c1d95;
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #312e81,
+        #4c1d4f
+    );
 }
 
 body.dark .section-title {
     color: #f8fafc;
 }
 
-body.dark #about .small-heading,
-body.dark #projects .small-heading {
+body.dark .small-heading {
     color: #c4b5fd;
 }
 
-/* MOBILE */
-@media (max-width: 576px) {
+body.dark .about-card,
+body.dark .skill-card,
+body.dark .project-card {
+    color: #e2e8f0;
+    border-color: #ffffff20;
+
+    background: linear-gradient(
+        135deg,
+        #1e293b,
+        #25245a,
+        #312e81
+    );
+}
+
+body.dark .about-card p,
+body.dark .skill-card p,
+body.dark .project-card p {
+    color: #e2e8f0;
+}
+
+body.dark .skill-card h4,
+body.dark .project-card h4 {
+    color: #ddd6fe;
+}
+
+body.dark .project-tag {
+    color: #f3e8ff;
+    background: linear-gradient(90deg, #4c1d95, #581c87);
+}
+
+/* Keep hero and footer text white in both themes */
+body.dark .hero-section,
+body.dark footer {
+    color: white;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
     .hero-section {
-        padding: 70px 15px;
+        padding: 75px 15px;
     }
 
     .section-padding {
-        padding: 50px 15px;
+        padding: 55px 15px;
     }
 
     .section-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .about-card {
-        padding: 22px;
+        padding: 23px;
+    }
+
+    .navbar-brand {
+        font-size: 19px;
     }
 }
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 35px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+
+    .gradient-btn,
+    .outline-btn {
+        margin: 6px 3px;
+    }
+    }
+    
