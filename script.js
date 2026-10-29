@@ -1,27 +1,29 @@
-// Display current year in footer
 
-const year = document.getElementById("year");
+// Display the current year in the footer
 
-if (year) {
-    year.textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
 
 
-// Close mobile menu after clicking a navigation link
+// Close the mobile navigation menu after clicking a link
 
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-const menu = document.getElementById("menu");
+const navbarMenu = document.getElementById("navbarMenu");
 
 navLinks.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        if (menu.classList.contains("show")) {
+        if (navbarMenu.classList.contains("show")) {
 
-            const navbarButton = document.querySelector(".navbar-toggler");
+            const collapseMenu =
+                bootstrap.Collapse.getOrCreateInstance(navbarMenu);
 
-            navbarButton.click();
+            collapseMenu.hide();
 
         }
 
