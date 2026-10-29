@@ -1,32 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Payal Makani | Portfolio</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
 
         <div class="container">
 
-            <a class="navbar-brand fw-bold" href="#home">
-                Payal<span>.</span>
+            <a class="navbar-brand" href="#home">
+                Payal Makani
             </a>
 
-            <button class="navbar-toggler"
+            <button
+                class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menu"
@@ -70,47 +72,63 @@
 
     </nav>
 
-    <section id="home" class="container py-5 text-center">
 
-        <p class="text-primary fw-bold">
-            Hello, Welcome to My Portfolio
-        </p>
+    <!-- Home Section -->
+    <section id="home">
 
-        <h1 class="display-5 fw-bold">
-            I'm <span>Payal Makani</span>
-        </h1>
+        <div class="container">
 
-        <h4 class="mt-3">
-            BTech CSE Data Science Student
-        </h4>
+            <div class="row align-items-center">
 
-        <p class="mt-3">
-            I am learning programming, web development and
-            Data Science. I enjoy creating projects and
-            exploring new technologies.
-        </p>
+                <div class="col-md-8">
 
-        <a href="#projects" class="btn btn-primary mt-3">
-            View My Projects
-        </a>
+                    <p class="intro-text">
+                        Hello, I am
+                    </p>
+
+                    <h1>Payal Makani</h1>
+
+                    <h3>BTech CSE Data Science Student</h3>
+
+                    <p class="home-description">
+                        I am interested in programming, web development
+                        and data science. I enjoy learning new technologies
+                        and building projects to improve my skills.
+                    </p>
+
+                    <a href="#projects" class="btn main-btn">
+                        View My Projects
+                    </a>
+
+                </div>
+
+                <div class="col-md-4 text-center">
+
+                    <div class="profile-circle">
+                        PM
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
-    <section id="about" class="container py-5">
 
-        <h2 class="text-center">About Me</h2>
+    <!-- About Section -->
+    <section id="about">
 
-        <div class="card p-4 mt-4">
+        <div class="container">
 
-            <p>
-                I am a Computer Science student specializing in
-                Data Science. I am interested in programming,
-                technology and web development.
-            </p>
+            <h2>About Me</h2>
 
-            <p>
-                I am learning new concepts and improving my
-                skills through practical assignments and
+            <p class="section-description">
+                I am a BTech CSE Data Science student who is exploring
+                different areas of technology. I have an interest in
+                programming, frontend development and data analytics.
+                I am currently learning by working on academic and
                 personal projects.
             </p>
 
@@ -118,25 +136,39 @@
 
     </section>
 
-    <section id="skills" class="container py-5">
 
-        <h2 class="text-center">My Skills</h2>
+    <!-- Skills Section -->
+    <section id="skills">
 
-        <div class="card p-4 mt-4">
+        <div class="container">
 
-            <div class="d-flex flex-wrap justify-content-center gap-3">
+            <h2>My Skills</h2>
 
-                <span class="badge bg-primary p-3">HTML</span>
+            <div class="skills-grid">
 
-                <span class="badge bg-info p-3">CSS</span>
+                <div class="skill-item">
+                    HTML
+                </div>
 
-                <span class="badge bg-danger p-3">JavaScript</span>
+                <div class="skill-item">
+                    CSS
+                </div>
 
-                <span class="badge bg-dark p-3">Bootstrap</span>
+                <div class="skill-item">
+                    Bootstrap
+                </div>
 
-                <span class="badge bg-success p-3">Python</span>
+                <div class="skill-item">
+                    JavaScript
+                </div>
 
-                <span class="badge bg-secondary p-3">C++</span>
+                <div class="skill-item">
+                    Python
+                </div>
+
+                <div class="skill-item">
+                    C Programming
+                </div>
 
             </div>
 
@@ -144,72 +176,83 @@
 
     </section>
 
-    <section id="projects" class="container py-5">
 
-        <h2 class="text-center">My Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects">
 
-        <div class="row mt-4 g-4">
+        <div class="container">
 
-            <div class="col-md-4">
+            <h2>My Projects</h2>
 
-                <div class="card p-3 h-100">
+            <p class="section-description">
+                Here are some projects I have worked on while learning
+                web development and programming.
+            </p>
 
-                    <h5>Personal Portfolio</h5>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-item">
+
+                    <h4>Personal Portfolio</h4>
 
                     <p>
-                        A personal website created using HTML,
-                        CSS and Bootstrap.
+                        A personal website created using HTML, CSS,
+                        Bootstrap and JavaScript to showcase my skills
+                        and projects.
                     </p>
 
-                    <a href="https://payalmakani08.github.io/personal-portfolio/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-primary">
+                    <a
+                        href="https://github.com/payalmakani08"
+                        target="_blank"
+                        class="project-link">
+
                         View Project
+
                     </a>
 
                 </div>
 
-            </div>
 
-            <div class="col-md-4">
+                <!-- Project 2 -->
+                <div class="project-item">
 
-                <div class="card p-3 h-100">
-
-                    <h5>Weather App</h5>
+                    <h4>Weather App</h4>
 
                     <p>
-                        A weather application project that
-                        uses an API to display weather data.
+                        A weather application that displays weather
+                        information using an API and JavaScript.
                     </p>
 
-                    <a href="https://payalmakani08.github.io/SkyCast-Pro-Weather-App/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-primary">
+                    <a
+                        href="https://payalmakani08.github.io/SkyCast-Pro-Weather-App/"
+                        target="_blank"
+                        class="project-link">
+
                         View Project
+
                     </a>
 
                 </div>
 
-            </div>
 
-            <div class="col-md-4">
+                <!-- Project 3 -->
+                <div class="project-item">
 
-                <div class="card p-3 h-100">
-
-                    <h5>Programming Practice</h5>
+                    <h4>Programming Practice</h4>
 
                     <p>
-                        Basic programming exercises using
-                        C, C++ and Python.
+                        Beginner programming exercises using C and
+                        Python to practice logic and problem solving.
                     </p>
 
-                    <a href="https://github.com/payalmakani08"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-primary">
+                    <a
+                        href="https://github.com/payalmakani08"
+                        target="_blank"
+                        class="project-link">
+
                         View GitHub
+
                     </a>
 
                 </div>
@@ -220,54 +263,73 @@
 
     </section>
 
-    <section id="contact" class="container py-5">
 
-        <h2 class="text-center">Contact Me</h2>
+    <!-- Contact Section -->
+    <section id="contact">
 
-        <div class="card p-4 mt-4 text-center">
+        <div class="container">
 
-            <p>
-                Feel free to connect with me.
-            </p>
+            <h2>Contact Me</h2>
 
             <p>
-                <strong>Email:</strong>
-                <a href="mailto:j25ds162@jssuninoida.edu.in">
-                    j25ds162@jssuninoida.edu.in
-                </a>
+                Feel free to contact me for project discussions
+                or learning opportunities.
             </p>
 
-            <p>
-                <strong>Phone:</strong>
-                <a href="tel:8279351742">
-                    8279351742
-                </a>
-            </p>
+            <div class="contact-details">
 
-            <p>
-                <strong>GitHub:</strong>
-                <a href="https://github.com/payalmakani08"
-                target="_blank"
-                rel="noopener noreferrer">
-                    Payal Makani
-                </a>
-            </p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:j25ds162@jssuninoida.edu.in">
+                        j25ds162@jssuninoida.edu.in
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:8279351742">
+                        8279351742
+                    </a>
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong>
+                    <a
+                        href="https://github.com/payalmakani08"
+                        target="_blank">
+
+                        github.com/payalmakani08
+
+                    </a>
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
-    <footer class="text-center p-3">
+
+    <!-- Footer -->
+    <footer>
 
         <p>
-            © 2026 Payal Makani | My Portfolio
+            © <span id="year"></span> Payal Makani
+        </p>
+
+        <p>
+            Made using HTML, CSS, Bootstrap and JavaScript
         </p>
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
+    <!-- External JavaScript -->
     <script src="script.js"></script>
 
 </body>
