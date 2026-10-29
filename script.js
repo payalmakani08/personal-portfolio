@@ -1,32 +1,32 @@
 
-const themeButton = document.getElementById("themeButton");
+/* Display the current year in the footer */
 
-// Apply the saved theme when the page opens
-const savedTheme = localStorage.getItem("portfolioTheme");
+const yearElement = document.getElementById("year");
 
-if (savedTheme === "dark") {
-    document.body.classList.add("dark");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
 }
 
-updateThemeButton();
 
-function changeTheme() {
-    document.body.classList.toggle("dark");
+/* Close mobile navbar after clicking a menu link */
 
-    const currentTheme = document.body.classList.contains("dark")
-        ? "dark"
-        : "light";
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-    localStorage.setItem("portfolioTheme", currentTheme);
-    updateThemeButton();
-}
+const navbarMenu = document.getElementById("navbarMenu");
 
-function updateThemeButton() {
-    if (!themeButton) return;
+navLinks.forEach(function (link) {
 
-    if (document.body.classList.contains("dark")) {
-        themeButton.textContent = "☀️ Light";
-    } else {
-        themeButton.textContent = "🌙 Dark";
-    }
-}
+    link.addEventListener("click", function () {
+
+        if (navbarMenu.classList.contains("show")) {
+
+            const navbarCollapse =
+                bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+
+            navbarCollapse.hide();
+
+        }
+
+    });
+
+});
