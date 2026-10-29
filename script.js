@@ -1,29 +1,27 @@
+// Display current year in footer
 
-/* Display the current year in the footer */
+const year = document.getElementById("year");
 
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+if (year) {
+    year.textContent = new Date().getFullYear();
 }
 
 
-/* Close mobile navbar after clicking a menu link */
+// Close mobile menu after clicking a navigation link
 
 const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
 
-const navbarMenu = document.getElementById("navbarMenu");
+const menu = document.getElementById("menu");
 
 navLinks.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        if (navbarMenu.classList.contains("show")) {
+        if (menu.classList.contains("show")) {
 
-            const navbarCollapse =
-                bootstrap.Collapse.getOrCreateInstance(navbarMenu);
+            const navbarButton = document.querySelector(".navbar-toggler");
 
-            navbarCollapse.hide();
+            navbarButton.click();
 
         }
 
