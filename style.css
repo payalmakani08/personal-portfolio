@@ -1,579 +1,532 @@
 
-/* =====================================
-   PAYAL MAKANI - PERSONAL PORTFOLIO
-   BEAUTIFUL GRADIENT DESIGN
-===================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #292544;
-    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+    color: #292344;
 
-    /* Wonderful gradient background */
-    background:
-        radial-gradient(ellipse at top left, #e0e7ff 0%, transparent 45%),
-        radial-gradient(ellipse at top right, #fce7f3 0%, transparent 45%),
-        linear-gradient(135deg, #f5f3ff, #eff6ff, #ecfeff);
-
-    background-attachment: fixed;
-    transition: background 0.4s, color 0.4s;
-}
-
-/* =====================================
-   NAVIGATION BAR
-===================================== */
-
-.custom-nav {
+    /* Pink, purple and blue gradient background */
     background: linear-gradient(
-        90deg,
-        #312e81,
-        #6d28d9,
-        #9333ea,
-        #db2777
+        135deg,
+        #fce4ec 0%,
+        #eadcff 45%,
+        #dceeff 100%
     );
 
-    border-bottom: 4px solid transparent;
-    border-image: linear-gradient(
-        90deg,
-        #22d3ee,
-        #c084fc,
-        #f9a8d4,
-        #fde047
-    ) 1;
+    background-attachment: fixed;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(70, 40, 100, 0.08);
 }
 
 .navbar-brand {
-    color: white !important;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    color: #6c3bb8 !important;
+}
+
+.navbar-brand span {
+    color: #ec4899;
 }
 
 .nav-link {
-    color: white !important;
-    margin: 0 5px;
-    transition: color 0.3s;
+    color: #39324f;
+    font-weight: 500;
+    margin-left: 12px;
+    transition: 0.3s;
 }
 
 .nav-link:hover {
-    color: #fde047 !important;
+    color: #9b42c8;
 }
 
-.theme-btn {
-    padding: 8px 15px;
-    border: 1px solid #ffffff90;
-    border-radius: 25px;
-    color: white;
-    background: #ffffff20;
-    cursor: pointer;
+.home-section {
+    padding: 100px 0;
+    min-height: 570px;
+    display: flex;
+    align-items: center;
 }
 
-.theme-btn:hover {
-    background: #ffffff35;
-}
-
-/* =====================================
-   HERO / HOME SECTION
-===================================== */
-
-.hero-section {
-    position: relative;
-    overflow: hidden;
-    padding: 110px 15px;
-    text-align: center;
-    color: white;
-
-    background:
-        radial-gradient(
-            circle at 15% 20%,
-            #818cf8 0%,
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 85% 80%,
-            #f472b6 0%,
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #312e81,
-            #6d28d9,
-            #9333ea,
-            #db2777
-        );
-}
-
-/* Decorative gradient circles */
-.hero-section::before,
-.hero-section::after {
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #67e8f9, #c084fc);
-    opacity: 0.18;
-    pointer-events: none;
-}
-
-.hero-section::before {
-    top: 20px;
-    left: -70px;
-}
-
-.hero-section::after {
-    bottom: 10px;
-    right: -60px;
-}
-
-.hero-section .container {
-    position: relative;
-    z-index: 1;
-}
-
-.small-heading {
-    color: #7c3aed;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.hero-section .small-heading {
-    color: #fde68a;
-}
-
-.hero-section h1 {
-    font-size: clamp(36px, 6vw, 60px);
-    font-weight: bold;
-    line-height: 1.2;
-    margin: 20px 0;
-}
-
-.hero-section h1 span {
-    color: #fde68a;
-}
-
-.hero-section h3 {
-    font-size: clamp(18px, 3vw, 25px);
-}
-
-.hero-text {
-    max-width: 650px;
-    margin: 22px auto;
+.hello-text {
+    color: #8a3fc5;
+    font-weight: 600;
     font-size: 17px;
 }
 
-/* =====================================
-   BUTTONS
-===================================== */
+.home-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 12px 0;
+}
 
-.gradient-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 8px;
-    color: white !important;
-    font-weight: bold;
-    text-decoration: none;
-    border: none;
-    border-radius: 30px;
-
+.gradient-text {
     background: linear-gradient(
         90deg,
-        #06b6d4,
-        #6366f1,
-        #a855f7
+        #ec4899,
+        #8b5cf6,
+        #3b82f6
     );
 
-    box-shadow: 0 5px 18px #4338ca35;
-    transition: transform 0.3s, box-shadow 0.3s;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.gradient-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 24px #4338ca50;
+.student-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #594b82;
 }
 
-.outline-btn {
-    display: inline-block;
-    padding: 10px 23px;
-    margin: 8px;
-    color: white;
-    border: 2px solid white;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-}
-
-.outline-btn:hover {
-    color: #6d28d9;
-    background: white;
-}
-
-/* =====================================
-   ALL SECTIONS
-===================================== */
-
-.section-padding {
-    padding: 75px 15px;
-    text-align: center;
-}
-
-.section-title {
-    color: #312e81;
-    font-size: 36px;
-    font-weight: bold;
-    margin: 12px 0 25px;
-}
-
-/* =====================================
-   ABOUT SECTION
-===================================== */
-
-#about {
-    background:
-        radial-gradient(
-            circle at 0% 0%,
-            #ddd6fe,
-            transparent 50%
-        ),
-        linear-gradient(135deg, #ffffff, #eff6ff);
-}
-
-.about-card {
-    padding: 32px;
-    text-align: left;
+.home-description {
+    max-width: 580px;
     line-height: 1.9;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
+    color: #514b66;
+    margin-top: 20px;
+}
+
+
+.btn-main {
+    background: linear-gradient(
+        90deg,
+        #c64fc5,
+        #7855d9
+    );
+
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(125, 75, 190, 0.25);
+}
+
+.btn-outline-main {
+    border: 2px solid #8b5cf6;
+    color: #7746c7;
+    padding: 10px 24px;
+    border-radius: 25px;
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.btn-outline-main:hover {
+    background: #8b5cf6;
+    color: white;
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 35px 20px;
+    border-radius: 18px;
+    max-width: 350px;
+    margin: auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow: 0 8px 25px rgba(90, 60, 140, 0.12);
+}
+
+.profile-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
 
     background: linear-gradient(
         135deg,
-        #ffffff,
-        #f5f3ff,
-        #e0f2fe
+        #ec4899,
+        #8b5cf6,
+        #3b82f6
     );
 
-    box-shadow: 0 10px 30px #4338ca15;
+    border: 5px solid white;
 }
 
-.about-card p:last-child {
-    margin-bottom: 0;
+.profile-card h3 {
+    font-size: 24px;
+    font-weight: 600;
 }
 
-/* =====================================
-   SKILLS SECTION
-===================================== */
+.profile-card p {
+    color: #77718a;
+}
+
+.profile-tags span {
+    display: inline-block;
+    background: #f2e9ff;
+    color: #7546b6;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+
+    margin: 4px;
+}
+
+
+/* COMMON SECTION */
+
+.section-padding {
+    padding: 75px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.small-heading {
+    color: #a044c4;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #352650;
+}
+
+.heading-line {
+    height: 4px;
+    width: 65px;
+
+    background: linear-gradient(
+        90deg,
+        #ec4899,
+        #8b5cf6,
+        #3b82f6
+    );
+
+    border-radius: 10px;
+    margin: 12px auto;
+}
+
+.section-subtitle {
+    color: #69617d;
+    margin-top: 15px;
+}
+
+
+/* ABOUT */
+
+.about-box {
+    background: rgba(255, 255, 255, 0.78);
+    padding: 30px;
+    border-radius: 15px;
+    height: 100%;
+
+    box-shadow: 0 5px 18px rgba(85, 50, 125, 0.07);
+}
+
+.about-box h3 {
+    color: #7545ba;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.about-box p {
+    color: #5e5872;
+    line-height: 1.8;
+}
+
+.learning-list {
+    margin-top: 20px;
+}
+
+.learning-list p {
+    color: #824bc1;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+
+/* SKILLS */
 
 .skills-section {
-    background:
-        radial-gradient(
-            circle at 100% 0%,
-            #fbcfe8,
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #ede9fe,
-            #fce7f3,
-            #cffafe
-        );
+    background: rgba(255, 255, 255, 0.28);
 }
 
 .skill-card {
+    text-align: center;
+    padding: 25px 12px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 14px;
+
     height: 100%;
-    padding: 30px 20px;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-
-    background: linear-gradient(
-        145deg,
-        #ffffff,
-        #f5f3ff,
-        #e0f2fe
-    );
-
-    box-shadow: 0 8px 25px #4338ca15;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
 }
 
 .skill-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 30px #4338ca25;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(95, 60, 150, 0.13);
 }
 
 .skill-icon {
-    font-size: 42px;
-    margin-bottom: 12px;
-}
+    width: 55px;
+    height: 55px;
 
-.skill-card h4 {
-    color: #6d28d9;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+    border-radius: 12px;
 
-/* =====================================
-   PROJECTS SECTION
-===================================== */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-#projects {
-    background:
-        radial-gradient(
-            circle at 100% 100%,
-            #fce7f3,
-            transparent 45%
-        ),
-        linear-gradient(135deg, #ffffff, #eff6ff);
-}
+    margin: 0 auto 15px;
 
-.project-card {
-    height: 100%;
-    overflow: hidden;
-    text-align: left;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
 
     background: linear-gradient(
-        145deg,
-        #ffffff,
-        #f5f3ff
+        135deg,
+        #ec4899,
+        #8b5cf6
     );
+}
 
-    box-shadow: 0 8px 25px #4338ca15;
-    transition: transform 0.3s, box-shadow 0.3s;
+.skill-card h5 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: #77718a;
+    margin-bottom: 0;
+}
+
+
+/* PROJECTS */
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+
+    box-shadow: 0 5px 18px rgba(85, 50, 125, 0.08);
+
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 30px #4338ca25;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(85, 50, 125, 0.15);
 }
 
-.project-banner {
-    padding: 28px 15px;
-    text-align: center;
-    font-size: 50px;
+.project-top {
+    min-height: 145px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
 }
 
-.banner-one {
-    background: linear-gradient(135deg, #67e8f9, #818cf8, #c4b5fd);
+.project-top span {
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.banner-two {
-    background: linear-gradient(135deg, #c4b5fd, #f9a8d4, #fbcfe8);
+.project-top h3 {
+    font-size: 23px;
+    font-weight: 600;
 }
 
-.banner-three {
-    background: linear-gradient(135deg, #a7f3d0, #93c5fd, #c4b5fd);
+.project-purple {
+    background: linear-gradient(
+        135deg,
+        #b76ce0,
+        #7755d7
+    );
 }
 
-.project-card h4 {
-    color: #6d28d9;
-    font-weight: bold;
+.project-pink {
+    background: linear-gradient(
+        135deg,
+        #f472b6,
+        #b45bd4
+    );
 }
 
-.project-tag {
+.project-blue {
+    background: linear-gradient(
+        135deg,
+        #60a5fa,
+        #7760d8
+    );
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content p {
+    color: #68617b;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 95px;
+}
+
+.project-tags {
+    margin-bottom: 20px;
+}
+
+.project-tags span {
     display: inline-block;
-    margin: 4px 3px;
-    padding: 5px 11px;
-    border-radius: 20px;
-    color: #5b21b6;
-    background: linear-gradient(90deg, #ede9fe, #fce7f3);
-    font-size: 12px;
+    padding: 5px 10px;
+    background: #f1e9ff;
+    color: #7945b9;
+    border-radius: 15px;
+    font-size: 11px;
+    margin: 3px;
 }
 
-/* =====================================
-   CONTACT SECTION
-===================================== */
+.project-link {
+    color: #8a42c5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #ec4899;
+}
+
+
+/* CONTACT */
 
 .contact-section {
-    background:
-        radial-gradient(
-            circle at 0% 100%,
-            #c4b5fd,
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            #dbeafe,
-            #fce7f3,
-            #cffafe
-        );
+    background: rgba(255, 255, 255, 0.3);
 }
 
-/* =====================================
-   FOOTER
-===================================== */
+.contact-box {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    padding: 35px;
 
-footer {
-    padding: 28px 15px;
-    text-align: center;
-    color: white;
-
-    background: linear-gradient(
-        90deg,
-        #312e81,
-        #6d28d9,
-        #9333ea,
-        #9d174d
-    );
-
-    border-top: 4px solid transparent;
-    border-image: linear-gradient(
-        90deg,
-        #22d3ee,
-        #c084fc,
-        #f9a8d4
-    ) 1;
+    box-shadow: 0 5px 20px rgba(85, 50, 125, 0.08);
 }
 
-footer p {
+.contact-box > p {
+    color: #5e5872;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item strong {
+    display: block;
+    color: #7745b8;
     margin-bottom: 5px;
 }
 
-/* =====================================
-   DARK THEME
-===================================== */
-
-body.dark {
-    color: #e2e8f0;
-
-    background:
-        radial-gradient(
-            ellipse at top left,
-            #312e81,
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at bottom right,
-            #581c87,
-            transparent 45%
-        ),
-        linear-gradient(135deg, #020617, #0f172a, #1e1b4b);
-
-    background-attachment: fixed;
+.contact-item a {
+    color: #5a5273;
+    text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
-body.dark #about,
-body.dark #projects {
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e1b4b,
-        #312e81
-    );
+.contact-item a:hover {
+    color: #ec4899;
 }
 
-body.dark .skills-section {
-    background: linear-gradient(
-        135deg,
-        #111827,
-        #312e81,
-        #4c1d4f
-    );
+
+/* FOOTER */
+
+.footer {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 25px 0;
 }
 
-body.dark .contact-section {
-    background: linear-gradient(
-        135deg,
-        #172554,
-        #312e81,
-        #4c1d4f
-    );
+.footer p {
+    margin-bottom: 5px;
+    color: #574d71;
 }
 
-body.dark .section-title {
-    color: #f8fafc;
+.footer-small {
+    font-size: 13px;
+    color: #817992 !important;
 }
 
-body.dark .small-heading {
-    color: #c4b5fd;
-}
 
-body.dark .about-card,
-body.dark .skill-card,
-body.dark .project-card {
-    color: #e2e8f0;
-    border-color: #ffffff20;
-
-    background: linear-gradient(
-        135deg,
-        #1e293b,
-        #25245a,
-        #312e81
-    );
-}
-
-body.dark .about-card p,
-body.dark .skill-card p,
-body.dark .project-card p {
-    color: #e2e8f0;
-}
-
-body.dark .skill-card h4,
-body.dark .project-card h4 {
-    color: #ddd6fe;
-}
-
-body.dark .project-tag {
-    color: #f3e8ff;
-    background: linear-gradient(90deg, #4c1d95, #581c87);
-}
-
-/* Keep hero and footer text white in both themes */
-body.dark .hero-section,
-body.dark footer {
-    color: white;
-}
-
-/* =====================================
-   MOBILE RESPONSIVE DESIGN
-===================================== */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 75px 15px;
+
+    .home-section {
+        padding: 65px 0;
+        text-align: center;
+    }
+
+    .home-section h1 {
+        font-size: 36px;
+    }
+
+    .student-title {
+        font-size: 20px;
+    }
+
+    .home-description {
+        font-size: 14px;
     }
 
     .section-padding {
-        padding: 55px 15px;
+        padding: 55px 0;
     }
 
-    .section-title {
-        font-size: 30px;
+    .section-heading h2 {
+        font-size: 29px;
     }
 
-    .about-card {
-        padding: 23px;
+    .about-box {
+        padding: 22px;
     }
 
-    .navbar-brand {
-        font-size: 19px;
+    .contact-box {
+        padding: 25px;
     }
+
+    .btn-outline-main {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
 }
-
-@media (max-width: 576px) {
-    .hero-section h1 {
-        font-size: 35px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-
-    .gradient-btn,
-    .outline-btn {
-        margin: 6px 3px;
-    }
-    }
-    
